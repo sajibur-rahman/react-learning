@@ -1,3 +1,4 @@
+import { createContext, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Content from './components/Content';
@@ -8,9 +9,14 @@ import Login from './components/Login';
 import PrivateRoute from './components/PrivateRoute';
 import Services from './components/Services';
 
+export const CountContext = createContext(0);
+
+
 function App() {
+  const [count,setCount] = useState(0);
+
   return (
-    <div className="App">
+    <CountContext.Provider value={[count,setCount]} className="App">
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>} />
@@ -23,7 +29,7 @@ function App() {
         </Route>
         
       </Routes>
-    </div>
+    </CountContext.Provider>
   );
 }
 

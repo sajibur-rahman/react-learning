@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CountContext } from '../App';
 
 const Dashboard = () => {
+    const [count,setCount] = useContext(CountContext);
     return (
         <div>
-            <h1>this is dashboard</h1>
+            <h1>this is dashboard {count}</h1>
         </div>
     );
 };
