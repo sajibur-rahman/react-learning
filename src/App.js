@@ -1,9 +1,10 @@
 import { createContext, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Clock from "./components/class/Clock/Clock";
+// import Clock from "./components/class/Clock/Clock";
 import Content from "./components/Content";
 import Dashboard from "./components/Dashboard";
+import Clock from "./components/function/Clock";
 import Header from "./components/Header/Header";
 import Home from "./components/Home";
 import Login from "./components/Login";

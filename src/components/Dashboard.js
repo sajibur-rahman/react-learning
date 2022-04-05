@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { CountContext } from '../App';
-import Button from './composiotion/Button';
-import Text from './composiotion/Text';
+import Button from './composition/Button';
+import Text from './composition/Text';
 
 const Dashboard = () => {
     const [count,setCount] = useContext(CountContext);
