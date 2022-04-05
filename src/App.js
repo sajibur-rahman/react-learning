@@ -1,6 +1,7 @@
 import { createContext, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Clock from './components/class/Clock/Clock';
 import Content from './components/Content';
 import Dashboard from './components/Dashboard';
 import Header from './components/Header/Header';
@@ -21,7 +22,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/login' element={<Login/>}/>
-
+        <Route path='/clock' element={<Clock/>}/>
         <Route path='/*' element={<PrivateRoute/>}>
           <Route path='dashboard' element={<Dashboard/>}/>
           <Route path='services' element={<Services/>}/>
